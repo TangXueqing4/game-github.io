@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>免费小游戏综合网站 - 无需登录即刻畅玩</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="无需注册登录，即开即玩的小游戏平台">
+
+  <meta property="og:title" content="免费小游戏综合网站">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="免费小游戏综合网站">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#667eea">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Microsoft YaHei', Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 0 30px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #4a5568;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: #718096;
+      font-weight: 300;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 30px 0 50px;
+    }
+
+    .game-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 25px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(50, 50, 93, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .game-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .game-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .game-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+
+    .game-title {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #2d3748;
+      font-weight: 600;
+    }
+
+    .game-desc {
+      color: #718096;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .play-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .play-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 免费小游戏综合网站</h1>
+      <p class="subtitle">无需注册登录，即开即玩！随时随地享受游戏乐趣</p>
+    </header>
+
+    <div class="games-grid">
+      <div class="game-card" onclick="window.open('https://poki.cn/', '_blank')">
+        <div class="game-icon">
+          <img src="/1.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">poki</h3>
+        <p class="game-desc">中文名:宝玩 99+小游戏</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://www.crazygames.com/')">
+        <div class="game-icon">
+         <img src="/2.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">crazygames</h3>
+        <p class="game-desc">国外的4399 游戏质量很好</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://www.emu666.com/' )">
+        <div class="game-icon">
+         <img src="/3.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">emu666</h3>
+        <p class="game-desc">街机游戏合集</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://www.cookinggames.com')">
+        <div class="game-icon">
+         <img src="/4.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">cooking games</h3>
+        <p class="game-desc">烹饪游戏大全</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://zh.y8.com/')">
+        <div class="game-icon">
+          <img src="/5.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">Y8 game</h3>
+        <p class="game-desc">适合所有年龄的游戏 游戏9万+</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://www.friv.com/')">
+        <div class="game-icon">
+          <img src="/6.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">friv</h3>
+        <p class="game-desc">精挑细选的小游戏 游戏300+</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://pacogames.com')">
+        <div class="game-icon">
+         <img src="/7.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">paco games</h3>
+        <p class="game-desc">一个高质游戏网站，但是是英文，加载慢</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+
+      <div class="game-card" onclick="window.open('https://cartoongames.io')">
+        <div class="game-icon">
+          <img src="/8.png" alt="游戏图标">
+        </div>
+        <h3 class="game-title">cartoon games</h3>
+        <p class="game-desc">卡通游戏大全 但是是英文</p>
+        <button class="play-btn">开始游戏</button>
+      </div>
+     <div class="game-card" onclick="window.open('https://www.kuaishou.com/profile/3xv54n2qjwi6qm9')">
+        <div class="game-icon">
+          <img src="/9.png" alt="图标">
+        </div>
+        <h3 class="game-title">作者主页</h3>
+        <p class="game-desc">快手</p>
+        <button class="play-btn">关注</button>
+      </div>
+    </div>
+
+
+    <footer>
+      <p>所有游戏开发者无法保证游戏内容安全，非常抱歉</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
